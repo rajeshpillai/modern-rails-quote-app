@@ -2,7 +2,8 @@ require "application_system_test_case"
 
 class QuotesTest < ApplicationSystemTestCase
   setup do
-    @quote = quotes(:first)
+    # We need to order quote as well in the system tests
+    @quote = Quote.ordered.first
   end
 
   test "Showing a quote" do
@@ -20,7 +21,7 @@ class QuotesTest < ApplicationSystemTestCase
     fill_in "Name", with: "Capybara quote"
 
     assert_selector "h1", text: "Quotes"
-    click_on "Create quote"
+    click_on "Create Quote"
 
     assert_selector "h1", text: "Quotes"
     assert_text "Capybara quote"
@@ -34,7 +35,7 @@ class QuotesTest < ApplicationSystemTestCase
     fill_in "Name", with: "Updated quote"
 
     assert_selector "h1", text: "Quotes"
-    click_on "Update quote"
+    click_on "Update Quote"
 
     assert_selector "h1", text: "Quotes"
     assert_text "Updated quote"
