@@ -33,7 +33,7 @@ class QuotesController < ApplicationController
     else
       # render :edit
        # Add `status: :unprocessable_entity` here
-       render :new, status: :unprocessable_entity
+       render :edit, status: :unprocessable_entity
     end
   end
 
