@@ -33,8 +33,8 @@ class QuotesController < ApplicationController
       redirect_to quotes_path, notice: "Quote was successfully updated."
     else
       # render :edit
-       # Add `status: :unprocessable_entity` here
-       render :edit, status: :unprocessable_entity
+      # Add `status: :unprocessable_entity` here
+      render :edit, status: :unprocessable_entity
     end
   end
 
