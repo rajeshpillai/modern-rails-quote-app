@@ -4,8 +4,9 @@
       <%= quote.errors.full_messages.to_sentence.capitalize %>
     </div>
   <% end %>
-
-  <%= f.input :name, input_html: { autofocus: true } %>
-  <%= link_to "Cancel", quotes_path, class: "btn btn--light" %>
-  <%= f.submit class: "btn btn--secondary" %>
+  <div class="p-2 m-2">
+    <%= f.input :name, input_html: { autofocus: true } %>
+    <%= link_to "Cancel", quotes_path, class: "btn btn--light bg-gray-600 m-2 p-2" %>
+    <%= f.submit class: "btn btn--light bg-blue-600 m-2 p-2" %>
+  </div>
 <% end %>
