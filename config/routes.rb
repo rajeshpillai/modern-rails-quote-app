@@ -5,4 +5,6 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   resources :quotes
+
+  root "quotes#index"
 end

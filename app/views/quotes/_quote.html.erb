@@ -1,14 +1,14 @@
 <%= turbo_frame_tag quote do %>
-  <div class="quote">
+  <div class="quote border-2 m-4">
     <%= link_to quote.name, quote_path(quote), data: { turbo_frame: "_top" } %>
-    <div class="quote__actions">
+    <div class="quote__actions flex flex-row">
       <%= button_to "Delete",
                     quote_path(quote),
                     method: :delete,
-                    class: "btn btn--light bg-red-600" %>
+                    class: "btn btn--light bg-red-600 m-2 p-2" %>
       <%= link_to "Edit",
                   edit_quote_path(quote),
-                  class: "btn btn--light bg-green-600" %>
+                  class: "btn btn--light bg-green-600 m-2 p-2" %>
     </div>
   </div>
 <% end %>
